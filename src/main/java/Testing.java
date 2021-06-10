@@ -6,6 +6,16 @@ import java.util.List;
 
 public class Testing {
     @Test
+    public void testMySite(){
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        ChromeDriver driver = new ChromeDriver();
+        driver.get("file:///C:/users/Nikita/Desktop/Test/src/name.html");
+        driver.findElementByTagName("input").sendKeys("534536");
+        System.out.println(driver.findElementByTagName("p").getText());
+        System.out.println(driver.findElementByTagName("select").getText());
+    }
+
+    @Test
     public void a() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         ChromeDriver driver = new ChromeDriver();
